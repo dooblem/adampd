@@ -19,19 +19,19 @@ ada-buttons.py:
 Usage on Raspbian
 ------------------------
 
-apt-get install git python-mpd
-
-cd /root
-git clone https://github.com/dooblem/adampd
-cd adampd
-
-# get adafruit lib
-git clone https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code
-
-# to test interactively:
-./ada-screen.py
-./ada-buttons.py
-
-# to setup the init script
-ln -s /root/adampd/adampd /etc/init.d/adampd
-insserv adampd 
+    apt-get install git python-mpd
+    
+    cd /root
+    git clone https://github.com/dooblem/adampd
+    cd adampd
+    
+    # get adafruit lib
+    git clone https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code
+    
+    # to test interactively:
+    ./ada-screen.py
+    ./ada-buttons.py
+    
+    # to setup the init script
+    ln -s /root/adampd/adampd /etc/init.d/adampd
+    insserv adampd 
