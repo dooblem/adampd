@@ -17,6 +17,7 @@ ada-buttons.py:
  * after some idle time not playing, you have to press buttons for some seconds to wake up the keypad, this is for cpu economy
 
 Adafruit doc link: https://learn.adafruit.com/adafruit-16x2-character-lcd-plus-keypad-for-raspberry-pi/usage
+
 Adafruit library: https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code
 
 Usage on Raspbian
