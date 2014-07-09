@@ -1,0 +1,36 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          adalcd
+# Required-Start:    mpd
+# Required-Stop:     mpd
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Ada LCD MPD clients
+# Description:       Ada LCD python daemons for LCD and buttons, for MPD
+### END INIT INFO
+
+#SCREEN_LOG=/tmp/ada-screen.log
+SCREEN_LOG=/dev/null
+
+#BUTTON_LOG=/tmp/ada-button.log
+BUTTON_LOG=/dev/null
+
+case "$1" in
+    start)
+	echo "Starting ada-screen.py..."
+        /root/adampd/ada-screen.py >$SCREEN_LOG 2>&1 &
+	sleep 1
+	echo "Starting ada-buttons.py..."
+        /root/adampd/ada-buttons.py >$SCREEN_LOG 2>&1 &
+        ;;
+    stop)
+	echo "pkilling..."
+	pkill ada-screen.py
+	pkill ada-buttons.py
+        ;;
+    *)
+        echo "Usage: $0 {start|stop}"
+        exit 2
+        ;;
+esac
