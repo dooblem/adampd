@@ -22,7 +22,7 @@ case "$1" in
         /root/adampd/ada-screen.py >$SCREEN_LOG 2>&1 &
 	sleep 1
 	echo "Starting ada-buttons.py..."
-        /root/adampd/ada-buttons.py >$SCREEN_LOG 2>&1 &
+        /root/adampd/ada-buttons.py >$BUTTON_LOG 2>&1 &
         ;;
     stop)
 	echo "pkilling..."

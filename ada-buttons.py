@@ -49,10 +49,16 @@ while True:
 	elif lcd.buttonPressed(lcd.UP):
 		press = True
 		print("up")
+		newvol = int(client.status()["volume"]) +10
+		if newvol > 100: newvol = 100
+		client.setvol(newvol)
 
 	elif lcd.buttonPressed(lcd.DOWN):
 		press = True
 		print("down")
+		newvol = int(client.status()["volume"]) -10
+		if newvol < 0: newvol = 0
+		client.setvol(newvol)
 	
 	if press:
 		nap = .2
