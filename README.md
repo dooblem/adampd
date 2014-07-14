@@ -13,10 +13,12 @@ ada-screen.py:
  * you can also set the default color
 
 ada-buttons.py:
- * select: play/pause, right/left: next/previous song, up/down: volume
+ * select: play/pause, right/left: next/previous song, up/down: nothing
  * after some idle time not playing, you have to press buttons for some seconds to wake up the keypad, this is for cpu economy
 
-AdaFruit doc link: https://learn.adafruit.com/adafruit-16x2-character-lcd-plus-keypad-for-raspberry-pi/usage
+Adafruit doc link: https://learn.adafruit.com/adafruit-16x2-character-lcd-plus-keypad-for-raspberry-pi/usage
+
+Adafruit library: https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code
 
 Usage on Raspbian
 ------------------------
